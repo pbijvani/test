@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App3"
@@ -8,52 +8,43 @@
              xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"      
              x:Class="App3.MainPage">
 
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
-
-        <telerikPrimitives:RadSideDrawer x:Name="optionsDrawer"
-                                             DrawerLength="300"                                                
-                                             
-                                             
+    <telerikPrimitives:RadSideDrawer x:Name="optionsDrawer"
+                                             DrawerLength="300"                                                                                                                                          
                                              DrawerTransitionType="SlideInOnTop"                                             
                                              DrawerLocation="Right">
-            <telerikPrimitives:RadSideDrawer.DrawerContent>
-                <Label Text="1"></Label>
-            </telerikPrimitives:RadSideDrawer.DrawerContent>
-            <telerikPrimitives:RadSideDrawer.MainContent>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <ListView x:Name="listView"    Grid.Row="0">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                        <Label Text="Id" TextColor="Black"
+        <telerikPrimitives:RadSideDrawer.DrawerContent>
+            <Label Text="1"></Label>
+        </telerikPrimitives:RadSideDrawer.DrawerContent>
+        <telerikPrimitives:RadSideDrawer.MainContent>
+            <Grid BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ListView x:Name="listView"    Grid.Row="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="Id" TextColor="Black"
                                                                     FontAttributes="Bold"
                                                                     HorizontalOptions="Start"
                                                                     VerticalOptions="Center"/>
 
-                                        <Label Text="Patient Name" TextColor="Black"
+                                    <Label Text="Patient Name" TextColor="Black"
                                                                     FontAttributes="Bold"
                                                                     HorizontalOptions="FillAndExpand"
                                                                     VerticalOptions="Center"/>
-                                        <Label Text="Age" TextColor="Black"
+                                    <Label Text="Age" TextColor="Black"
                                                                     FontAttributes="Bold"
                                                                     HorizontalOptions="End"
                                                                     VerticalOptions="Center"/>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </Grid>
-            </telerikPrimitives:RadSideDrawer.MainContent>
-        </telerikPrimitives:RadSideDrawer>
-
-        <!-- Place new controls here -->
-        
-    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </telerikPrimitives:RadSideDrawer.MainContent>
+    </telerikPrimitives:RadSideDrawer>
 
 </ContentPage>
